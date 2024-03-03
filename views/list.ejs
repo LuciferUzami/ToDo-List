@@ -1,0 +1,23 @@
+<!-- Insert Header -->
+<%- include("header") -%>
+    <div class="main" id="heading">
+        <h1><%= titles %></h1>
+    </div>
+    
+    <!-- Todo Items -->
+    <div class="box">
+        <!-- List -->
+            <% for (var i=0; i<todo.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= todo[i] %> </p>
+            </div>
+            <% } %>
+            <form action="/" method="post" class="item">    
+                <input type="text" name="value" placeholder="New Todo">
+                <button type="submit" name="list" value=<%= titles %>>+</button>
+            </form>
+    </div>
+       
+<!-- Insert Footer -->
+<%- include("footer") -%>                       
